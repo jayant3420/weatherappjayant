@@ -5,29 +5,33 @@ const SearchBar = () => {
   const [searchInput, setSearchInput] = useState("greater noida");
   const [weatherInfo, setWeatherInfo] = useState({});
   const getWeatherInfo = async () => {
-    try {
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&units=metric&appid=d79f57d111a5be85d6cf0eb6e624afed`;
+    if (searchInput) {
+      try {
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${searchInput}&units=metric&appid=d79f57d111a5be85d6cf0eb6e624afed`;
 
-      const response = await fetch(url);
-      const data = await response.json();
-      const { temp, humidity, pressure } = data.main;
-      const { name } = data;
-      const { country, sunset } = data.sys;
-      const { main: weathermood } = data.weather[0];
-      const { speed } = data.wind;
-      console.log(data);
-      setWeatherInfo({
-        temp,
-        humidity,
-        pressure,
-        name,
-        country,
-        sunset,
-        weathermood,
-        speed
-      });
-    } catch (error) {
-      console.log(error);
+        const response = await fetch(url);
+        const data = await response.json();
+        const { temp, humidity, pressure } = data.main;
+        const { name } = data;
+        const { country, sunset } = data.sys;
+        const { main: weathermood } = data.weather[0];
+        const { speed } = data.wind;
+        console.log(data);
+        setWeatherInfo({
+          temp,
+          humidity,
+          pressure,
+          name,
+          country,
+          sunset,
+          weathermood,
+          speed
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    } else {
+      alert("Please enter city name");
     }
   };
   useEffect(() => {

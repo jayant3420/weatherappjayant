@@ -41,7 +41,7 @@ body {
   width: 35rem;
   height: 3.4rem;
   padding: 0.9rem;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   color: var(--color-skyblue);
   font-size: 1.5rem;
   border: none;
@@ -61,13 +61,13 @@ body {
 }
 
 .searchBtn {
-  margin-left: -1px;
+  margin-left: 1.6rem;
   width: 9rem;
   height: 3.4rem;
   background-color: var(--color-skyblue);
   color: var(--color-white);
   border: 3px solid var(--color-skyblue);
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px;
   font-size: 1.5rem;
   cursor: pointer;
 }

@@ -39,20 +39,29 @@ const SearchBar = () => {
   }, []);
   return (
     <>
-      <div className="wrap">
-        <div className="search">
-          <input
-            type="search"
-            placeholder="Search.."
-            autoFocus
-            className="searchTerm"
-            name="CitySearch"
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-          />
-          <button type="button" className="searchBtn" onClick={getWeatherInfo}>
-            Search
-          </button>
+      <div className="search-header">
+        <div className="search-label">
+          <label htmlFor="CitySearch">Please Enter City name</label>
+        </div>
+        <div className="wrap">
+          <div className="search">
+            <input
+              type="search"
+              placeholder="Enter City Name"
+              autoFocus
+              className="searchTerm"
+              name="CitySearch"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+            />
+            <button
+              type="button"
+              className="searchBtn"
+              onClick={getWeatherInfo}
+            >
+              Search
+            </button>
+          </div>
         </div>
       </div>
 

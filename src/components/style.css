@@ -1,0 +1,179 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --color-darkgray: #222121;
+  --color-skyblue: #048b9c;
+  --color-white: #fff;
+  --color-lightgray: #6d6d6dca;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--color-darkgray);
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  margin-top: 16rem;
+}
+
+.searchTerm {
+  width: 35rem;
+  height: 3.4rem;
+  padding: 0.9rem;
+  border-radius: 5px 0 0 5px;
+  color: var(--color-skyblue);
+  font-size: 1.5rem;
+  border: none;
+  box-sizing: border-box;
+}
+
+.searchBtn {
+  margin-left: -1px;
+  width: 9rem;
+  height: 3.4rem;
+  background-color: var(--color-skyblue);
+  color: var(--color-white);
+  border: 3px solid var(--color-skyblue);
+  border-radius: 0 5px 5px 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.widget {
+  height: 50rem;
+  width: 75rem;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: var(--color-white);
+  margin: 10rem auto;
+}
+
+.weatherIcons {
+  height: 50%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherIcons .wi {
+  font-size: 17rem;
+  margin-top: auto;
+}
+
+.WeatherInfo {
+  display: flex;
+}
+
+.Wi-Temp {
+  background-color: #000000;
+  width: 65%;
+  color: #ffffff;
+  display: flex;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 6rem;
+  padding: 4rem 1.5rem;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description p:first-child {
+  font-size: 5rem;
+}
+
+.description p:last-child {
+  font-size: 2.5rem;
+}
+
+.wi-date {
+  background-color: var(--color-skyblue);
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.wi-date p:first-child {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.extra-weather-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.part {
+  width: 25%;
+  height: 10.1rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.part p:first-child .wi {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--color-skyblue);
+}
+
+.part p:first-child,
+.part p:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.part p:last-child {
+  font-size: 1.5rem;
+  color: var(--color-lightgray);
+}
+
+.sunsetTimeClass {
+  text-transform: uppercase;
+  display: block;
+}
+
+.sunsetText {
+  display: block;
+}
+
+.temp-info {
+  border-bottom-left-radius: 20px;
+}
+
+.wind-info {
+  border-bottom-right-radius: 20px;
+}
